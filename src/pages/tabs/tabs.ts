@@ -1,7 +1,10 @@
+import { IonicPage } from 'ionic-angular';
 import {Component} from "@angular/core";
 
 import {HomePage} from "../home/home";
 
+
+@IonicPage()
 @Component({
   templateUrl: 'tabs.html'
 })

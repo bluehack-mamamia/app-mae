@@ -180,10 +180,17 @@ export class HomePage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams) {
 
+    this.abrirProduto();
   }
 
   abrirPesquisar() {
     this.navCtrl.push('PesquisarProdutoPage', {
+
+    });
+  }
+
+  abrirProduto() {
+    this.navCtrl.push('ProdutoPage', {
 
     });
   }
