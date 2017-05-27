@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the PesquisarProdutoPage page.
+ * Generated class for the ProductSearchPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-pesquisar-produto',
-  templateUrl: 'pesquisar-produto.html',
+  selector: 'page-product-search',
+  templateUrl: 'product-search.html',
 })
-export class PesquisarProdutoPage {
+export class ProductSearchPage {
 
   produtos: any = [
     {
@@ -180,7 +180,5 @@ export class PesquisarProdutoPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
-
-
 
 }

@@ -184,15 +184,13 @@ export class HomePage {
   }
 
   abrirPesquisar() {
-    this.navCtrl.push('PesquisarProdutoPage', {
+    this.navCtrl.push('ProductSearchPage', {
 
     });
   }
 
   abrirProduto() {
-    this.navCtrl.push('ProdutoPage', {
-
-    });
+    this.navCtrl.push('ProductPage');
   }
 
 }
