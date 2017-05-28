@@ -7,12 +7,25 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>comparator</ion-title>
+    <ion-title>Comparador</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-item *ngFor="let product of products">
+        <ion-thumbnail item-left>
+          <img [src]="product.image" />
+        </ion-thumbnail>
+        <h2>{{product.name}}</h2>
+        <p>Melhor Preço!</p>
+        <p ion-text item-right>{{product.price}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 
 </ion-content>
+
