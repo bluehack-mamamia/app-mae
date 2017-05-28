@@ -16,6 +16,7 @@
 // automatically applied to the <body> element in the app.
 
 $redlight:    #ed1b35;
+$redmedium:   #cf172e;
 $reddark:     #570c18;
 $yellowlight: #f2b01d;
 $yellowdark:  #8c6031;
@@ -77,4 +78,15 @@ $yellowdark:  #8c6031;
 	border: 0;
 }
 
-// border-bottom: 1px solid #dedede;
+.item-md h2 {
+	white-space: normal;
+}
+
+.icon-md-reddark {
+    padding: 0px 10px;
+}
+
+.searchbar-md {
+    background: $redmedium;
+    margin-top: -1px;
+}
