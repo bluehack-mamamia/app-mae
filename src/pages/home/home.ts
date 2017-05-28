@@ -186,7 +186,8 @@ export class HomePage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public product: ProductProvider) {
-    //this.productList = product.get();
+
+    this.productList = product.get();
   }
 
   loadProducts() {

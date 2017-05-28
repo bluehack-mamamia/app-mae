@@ -23,17 +23,17 @@
 
   <ion-list>
     <ion-row no-padding>
-      <ion-col no-padding col-6 *ngFor="let product of productList">
+      <ion-col no-padding col-6 *ngFor="let product of productList | async">
         <ion-card>
           <ion-card-content tappable (click)="openDetails(product)">
             <div class="crop">
-              <img [src]="product._source.image">
+              <img [src]="product.image">
             </div>
-            <ion-card-title>{{product._source.name}}</ion-card-title>
+            <ion-card-title>{{product.name}}</ion-card-title>
           </ion-card-content>
           <ion-row align-items-center>
             <ion-col text-left padding-left>
-              <p class="price">{{product._source.price}}</p>
+              <p class="price">{{product.price}}</p>
             </ion-col>
 
             <ion-col text-right no-padding>
