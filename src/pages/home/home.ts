@@ -19,175 +19,19 @@ import {Http} from "@angular/http";
 export class HomePage {
 
   productList: any;
-
-  products: any = [
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
-      "name": "Arroz Parboilizado Ouro Nobre 5kg "
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/776be53f3d0abfa30b863363567673a2.png",
-      "name": "Arroz Agulhinha Ouro Nobre 5kg "
-    },
-    {
-      "price": "11,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/862ed249f2986bd4767dbb4c3ff6a700_2.png",
-      "name": "Arroz Agulhinha Rei do Sul 5kg"
-    },
-    {
-      "price": "13,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/9dee70e5bdee6750d5507aa977b646f9.png",
-      "name": "Arroz Agulhinha Brejeiro 5kg"
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
-      "name": "Arroz Parboilizado Ouro Nobre 5kg "
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/776be53f3d0abfa30b863363567673a2.png",
-      "name": "Arroz Agulhinha Ouro Nobre 5kg "
-    },
-    {
-      "price": "11,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/862ed249f2986bd4767dbb4c3ff6a700_2.png",
-      "name": "Arroz Agulhinha Rei do Sul 5kg"
-    },
-    {
-      "price": "13,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/9dee70e5bdee6750d5507aa977b646f9.png",
-      "name": "Arroz Agulhinha Brejeiro 5kg"
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
-      "name": "Arroz Parboilizado Ouro Nobre 5kg "
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/776be53f3d0abfa30b863363567673a2.png",
-      "name": "Arroz Agulhinha Ouro Nobre 5kg "
-    },
-    {
-      "price": "11,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/862ed249f2986bd4767dbb4c3ff6a700_2.png",
-      "name": "Arroz Agulhinha Rei do Sul 5kg"
-    },
-    {
-      "price": "13,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/9dee70e5bdee6750d5507aa977b646f9.png",
-      "name": "Arroz Agulhinha Brejeiro 5kg"
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
-      "name": "Arroz Parboilizado Ouro Nobre 5kg "
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/776be53f3d0abfa30b863363567673a2.png",
-      "name": "Arroz Agulhinha Ouro Nobre 5kg "
-    },
-    {
-      "price": "11,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/862ed249f2986bd4767dbb4c3ff6a700_2.png",
-      "name": "Arroz Agulhinha Rei do Sul 5kg"
-    },
-    {
-      "price": "13,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/9dee70e5bdee6750d5507aa977b646f9.png",
-      "name": "Arroz Agulhinha Brejeiro 5kg"
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
-      "name": "Arroz Parboilizado Ouro Nobre 5kg "
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/776be53f3d0abfa30b863363567673a2.png",
-      "name": "Arroz Agulhinha Ouro Nobre 5kg "
-    },
-    {
-      "price": "11,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/862ed249f2986bd4767dbb4c3ff6a700_2.png",
-      "name": "Arroz Agulhinha Rei do Sul 5kg"
-    },
-    {
-      "price": "13,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/9dee70e5bdee6750d5507aa977b646f9.png",
-      "name": "Arroz Agulhinha Brejeiro 5kg"
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
-      "name": "Arroz Parboilizado Ouro Nobre 5kg "
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/776be53f3d0abfa30b863363567673a2.png",
-      "name": "Arroz Agulhinha Ouro Nobre 5kg "
-    },
-    {
-      "price": "11,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/862ed249f2986bd4767dbb4c3ff6a700_2.png",
-      "name": "Arroz Agulhinha Rei do Sul 5kg"
-    },
-    {
-      "price": "13,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/9dee70e5bdee6750d5507aa977b646f9.png",
-      "name": "Arroz Agulhinha Brejeiro 5kg"
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
-      "name": "Arroz Parboilizado Ouro Nobre 5kg "
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/776be53f3d0abfa30b863363567673a2.png",
-      "name": "Arroz Agulhinha Ouro Nobre 5kg "
-    },
-    {
-      "price": "11,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/862ed249f2986bd4767dbb4c3ff6a700_2.png",
-      "name": "Arroz Agulhinha Rei do Sul 5kg"
-    },
-    {
-      "price": "13,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/9dee70e5bdee6750d5507aa977b646f9.png",
-      "name": "Arroz Agulhinha Brejeiro 5kg"
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
-      "name": "Arroz Parboilizado Ouro Nobre 5kg "
-    },
-    {
-      "price": "12,90",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/776be53f3d0abfa30b863363567673a2.png",
-      "name": "Arroz Agulhinha Ouro Nobre 5kg "
-    },
-    {
-      "price": "11,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/862ed249f2986bd4767dbb4c3ff6a700_2.png",
-      "name": "Arroz Agulhinha Rei do Sul 5kg"
-    },
-    {
-      "price": "13,95",
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/9dee70e5bdee6750d5507aa977b646f9.png",
-      "name": "Arroz Agulhinha Brejeiro 5kg"
-    }
-  ];
+  startAt: number;
+  endAt: number;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public product: ProductProvider) {
 
-    this.productList = product.get();
+    this.startAt = 0;
+    this.endAt = 10;
+    this.productList = [];
+    this.product.get(this.startAt, this.endAt).subscribe(data => {
+      this.productList = data.splice(0,30);
+    });
   }
 
   loadProducts() {
@@ -205,9 +49,12 @@ export class HomePage {
   }
 
   loadMore($event: any) {
-    $event.complete();
     //this.productList = this.product.get();
     //this.productList.subscribe(() => $event.complete());
+    this.startAt = this.endAt;
+    this.endAt = this.endAt += 10;
+    this.productList = this.product.get(this.startAt, this.endAt);
+    $event.complete();
   }
 
 

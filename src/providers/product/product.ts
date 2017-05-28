@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Headers, Http, RequestOptions, URLSearchParams} from "@angular/http";
+import {Http} from "@angular/http";
 import "rxjs/add/operator/map";
 import {AngularFireDatabase} from "angularfire2/database/database";
 
@@ -17,23 +17,8 @@ export class ProductProvider {
 
   }
 
-  get(params?: any) {
-    /*const options = new RequestOptions();
-     const p = new URLSearchParams();
-
-     for (let k in params) {
-     p.set(k, params[k]);
-     }
-
-     options.params = !options.params && p || options.params;
-     options.headers = new Headers();
-     options.headers.append('Content-Type', "application/json");*/
-
-    /* return this.http.get(this.API_URL, options)
-     .map(resp => resp.json());*/
-    return this.db.list('products', {
-
-    });
+  get(start?: number, end?: number) {
+    return this.db.list('products');
   }
 
 }
