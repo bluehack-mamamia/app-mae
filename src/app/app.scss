@@ -15,6 +15,66 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+$redlight:    #ed1b35;
+$reddark:     #570c18;
+$yellowlight: #f2b01d;
+$yellowdark:  #8c6031;
+
 .content {
   background: #eee;
 }
+
+.toolbar-background-md {
+	background-color: $redlight;
+}
+
+.toolbar-title-md {
+	color: white;
+}
+
+.bar-button-default-md,
+.bar-button-clear-md-default,
+.bar-button-md-default {
+    color: white;
+}
+
+.bar-button-default-md:hover:not(.disable-hover),
+.bar-button-clear-md-default:hover:not(.disable-hover),
+.bar-button-md-default:hover:not(.disable-hover) {
+	color: $reddark;
+}
+
+.button-clear-md-primary {
+	color: white;
+}
+
+.card-content-md {
+	padding-bottom: 0;
+}
+
+.tabs-md .tabbar { 
+	background-color: $yellowlight;
+}
+
+.tabs-md .tab-button[aria-selected=true] {
+	color: white;
+	padding: 0px 10px;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+	color: white;
+} 
+
+.tabs-md .tab-button-icon {
+	color: $yellowdark;
+} 
+
+.tabs-md .tab-button {
+	color: $yellowdark;
+}
+
+.list-md .item-block .item-inner {
+	border: 0;
+}
+
+// border-bottom: 1px solid #dedede;
