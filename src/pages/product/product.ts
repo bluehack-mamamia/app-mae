@@ -14,15 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProductPage {
 
-  product: any = {
-      "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
-      "name": "Arroz Parboilizado Ouro Nobre 5kg "
-    };
-
-  prices: any = [0, 0, 0, 0, 0, 0, 0];
+  product: any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams) {
+
+    this.product = navParams.get('product');
   }
 
 }

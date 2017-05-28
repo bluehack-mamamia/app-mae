@@ -23,7 +23,7 @@
 
   <ion-list>
     <ion-row no-padding>
-      <ion-col no-padding col-6 *ngFor="let product of productList">
+      <ion-col no-padding col-6 *ngFor="let product of productList | async">
         <ion-card>
           <ion-card-content tappable (click)="openDetails(product)">
             <div class="crop">
