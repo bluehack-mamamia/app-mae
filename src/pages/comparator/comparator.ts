@@ -177,7 +177,16 @@ export class ComparatorPage {
     },
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  total: number;
+
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams) {
+
+    this.total = 0;
+
+    for(let product of this.products){
+      this.total += Number.parseInt(product.price.replace(',', '.'));
+    }
   }
 
   ionViewDidLoad() {
