@@ -12,8 +12,6 @@ import {AngularFireDatabase} from "angularfire2/database/database";
 @Injectable()
 export class ProductProvider {
 
-  private API_URL = '';
-
   constructor(public http: Http,
               private db: AngularFireDatabase) {
 
@@ -33,7 +31,7 @@ export class ProductProvider {
 
     /* return this.http.get(this.API_URL, options)
      .map(resp => resp.json());*/
-    return this.db.list('/produtos', {
+    return this.db.list('products', {
 
     });
   }
