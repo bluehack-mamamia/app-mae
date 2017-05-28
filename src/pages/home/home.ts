@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
-import {IonicPage, ModalController, NavController, NavParams} from "ionic-angular";
+import {IonicPage, NavController, NavParams} from "ionic-angular";
+import {ProductProvider} from "../../providers/product/product";
 
 /**
  * Generated class for the HomePage page.
@@ -14,7 +15,7 @@ import {IonicPage, ModalController, NavController, NavParams} from "ionic-angula
 })
 export class HomePage {
 
-  produtos: any = [
+  productList: any = [
     {
       "price": "12,90",
       "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/112dd3fe99fa7a360cc1f2a4b71847c1.png",
@@ -178,18 +179,26 @@ export class HomePage {
   ];
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public product: ProductProvider) {
 
   }
 
-  abrirPesquisar() {
-    this.navCtrl.push('ProductSearchPage', {
-
-    });
+  loadProducts() {
+    this.productList = this.product.get();
   }
 
-  abrirProduto() {
+  openSearch() {
+    this.navCtrl.push('ProductSearchPage');
+  }
+
+  openDetails(product: any) {
     this.navCtrl.push('ProductPage');
+  }
+
+  loadMore($event: any) {
+    this.productList = this.product.get();
+    this.productList.subscribe(() => $event.complete());
   }
 
 }
