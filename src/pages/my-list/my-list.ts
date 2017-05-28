@@ -174,7 +174,7 @@ export class MyListPage {
       "price": "13,95",
       "image": "http://www.supermercadosguanabara.com.br/out_files/img_produtos/9dee70e5bdee6750d5507aa977b646f9.png",
       "name": "Arroz Agulhinha Brejeiro 5kg"
-    },
+    }
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
